@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">MoneyMap</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login / Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 class="sec-heading">Register</h2>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <h2 class="sec-heading">Login</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@media (max-width: 980px){
+    
+#login-nav{
+    display: none;
+ }
+}
+@media (max-width: 480px){
+    .hero-heading{
+        font-size: 1.5rem;
+    }
+    .hero-pera{
+        font-size: 1rem;
+    }
+    .sec-heading{
+        font-size: 0.9rem;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 0, 15px;
+    }
+    nav ul li a{
+        padding: 4px, 15px;
+        font-size: 13px;
+    }
+    input, select, textarea, button{
+        /* width: 80%; */
+    }
+    button{
+        font-size: 1rem;
+    }
+    .h-tb-size{
+        min-width: 280px;
+        max-width: 280px;
+    }
+    .history-tables{
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .saving-amt{
+        width: 160px;
+        padding: 6px 8px;
+    }
+    p{
+        font-size: 14px;
+    }
+}

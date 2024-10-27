@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">MoneyMap</h2>
+        <ul id="login-nav" style="visibility: hidden;">
+            <li><a href="#add-transaction">Add transaction</a></li>
+            <li><a href="#transaction-history">Transaction history</a></li>
+            <li><a href="#savings">Savings</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login / Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="hero-heading">Welcome to Your Personal Finance Tracker</h1>
+        <p class="hero-pera">Track your finances efficiently and effortlessly.</p>
+        <ul id="hero-nav" style="display: block;">
+            <li><a href="login.html">Login / Register</a></li>
+        </ul>
+        <section id="user-deatil-section">
+            <div id="userDetails" style="display: none;">
+                <h2 class="hero-pera">Hello, <span id="userName"></span>!</h2>
+                <!-- Add this button in index.html where user details are shown -->
+                <button id="logoutButton">Logout</button>
+
+                <h2>Your Finance Tracker</h2>
+                <section id="add-transaction">
+                    <!-- Transaction Form -->
+                    <h2 class="sec-heading">Add Transaction</h2>
+                    <form id="transactionForm">
+                        <select id="type" required>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <input type="number" id="amount" placeholder="Amount" required>
+                        <input type="text" id="category" placeholder="Category" required>
+                        <input type="date" id="date" required>
+                        <textarea id="notes" placeholder="Notes (Optional)"></textarea>
+                        <button type="submit">Add Transaction</button>
+                    </form>
+                </section>
+                <section id="transaction-history">
+
+
+                    <!-- Transaction History -->
+                    <h2 class="sec-heading">Transaction History</h2>
+                    <button id="loadTransactions">Load Transactions</button>
+                    <!-- <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table> -->
+                    <div class="history-tables">
+                        <div class="income">
+                            <h2 class="sec-heading">Income</h2>
+                            <table class="h-tb-size" id="incomeTable">
+                                <thead>
+                                    <tr>
+                                        <th>Amount</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">Total Income: <span id="totalIncome">0</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="expense">
+                            <h2 class="sec-heading">Expenses</h2>
+                            <table class="h-tb-size" id="expenseTable">
+                                <thead>
+                                    <tr>
+                                        <th>Amount</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">Total Expenses: <span id="totalExpenses">0</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <section id="saving-section">
+                        <h2 class="sec-heading">Savings</h2>
+                        <p class="saving-amt">Your Savings: <span id="savings">0</span></p>
+                    </section>
+            </div>
+        </section>
+
+    </div>
+    </section>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
